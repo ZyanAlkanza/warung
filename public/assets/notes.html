@@ -1,0 +1,246 @@
+<div class="konten">
+    <div class="judul">
+        <h1>Verifikasi Pembayaran</h1>
+
+        <div class="tombol">
+            <form action="" method="POST">
+                <input
+                    type="text"
+                    class="form-control pencarian"
+                    name="pencarian"
+                    placeholder="Cari Nama, Blok Rumah atau Bulan..."
+                    autocomplete="off"
+                    aria-label="Recipient's username"
+                    aria-describedby="button-addon2"
+                />
+                <div class="input-group-append">
+                    <button
+                        class="btn btn-outline-primary cari"
+                        type="submit"
+                        id="button-addon2"
+                    >
+                        Cari
+                    </button>
+                </div>
+            </form>
+
+            <a href="http://localhost/iuran_lingkungan/adminVerifikasi/tambah">
+                <button class="btn btn-primary">Tambah</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="bungkus">
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Blok Rumah</th>
+                <th>Tanggal Bayar</th>
+                <th>Pembayaran Bulan</th>
+                <th>Jenis Iuran</th>
+                <th>Status Pembayaran</th>
+                <th>Aksi</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Azhari Nur Fauzi</td>
+                <td>H1</td>
+                <td>10 March 2023</td>
+                <td>Maret</td>
+                <td>Iuran Lingkungan</td>
+                <td>
+                    <span class="badge badge-pill badge-success p-1 pr-2 pl-2"
+                        >Sudah Bayar</span
+                    >
+                </td>
+                <td class="aksi">
+                    <div class="tombol">
+                        <a
+                            href="http://localhost/iuran_lingkungan/adminVerifikasi/verifikasi/62"
+                        >
+                            <button class="btn btn-primary">Detail</button>
+                        </a>
+                    </div>
+
+                    <div class="tombol">
+                        <a
+                            href=" http://localhost/iuran_lingkungan/adminVerifikasi/edit/62"
+                        >
+                            <button class="btn btn-success">Edit</button>
+                        </a>
+                    </div>
+
+                    <div class="tombol">
+                        <button
+                            class="btn btn-danger"
+                            data-toggle="modal"
+                            data-target="#delete62"
+                        >
+                            Hapus
+                        </button>
+                    </div>
+                </td>
+            </tr>
+
+            <div
+                class="modal fade"
+                id="delete62"
+                data-backdrop="static"
+                data-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5
+                                class="modal-title font-weight-bold"
+                                id="staticBackdropLabel"
+                            >
+                                Hapus Data Transaksi
+                            </h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            Anda akan menghapus data transaksi ini. Yakin?
+                        </div>
+
+                        <div class="modal-footer">
+                            <a
+                                href="http://localhost/iuran_lingkungan/adminVerifikasi"
+                            >
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary pt-1 pd-1 text-small"
+                                    data-dismiss="modal"
+                                >
+                                    Batal
+                                </button>
+                            </a>
+                            <a
+                                href="http://localhost/iuran_lingkungan/adminVerifikasi/hapus/62"
+                            >
+                                <button
+                                    type="button"
+                                    class="btn btn-danger pt-1 pd-1 text-small"
+                                >
+                                    Hapus
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <tr>
+                <td>2</td>
+                <td>Azhari Nur Fauzi</td>
+                <td>H1</td>
+                <td>19 February 2023</td>
+                <td>Februari</td>
+                <td>Iuran Lingkungan</td>
+                <td>
+                    <span class="badge badge-pill badge-success p-1 pr-2 pl-2"
+                        >Sudah Bayar</span
+                    >
+                </td>
+                <td class="aksi">
+                    <div class="tombol">
+                        <a
+                            href="http://localhost/iuran_lingkungan/adminVerifikasi/verifikasi/59"
+                        >
+                            <button class="btn btn-primary">Detail</button>
+                        </a>
+                    </div>
+
+                    <div class="tombol">
+                        <a
+                            href=" http://localhost/iuran_lingkungan/adminVerifikasi/edit/59"
+                        >
+                            <button class="btn btn-success">Edit</button>
+                        </a>
+                    </div>
+                    <div class="tombol">
+                        <button
+                            class="btn btn-danger"
+                            data-toggle="modal"
+                            data-target="#delete59"
+                        >
+                            Hapus
+                        </button>
+                    </div>
+                </td>
+            </tr>
+
+            <div
+                class="modal fade"
+                id="delete59"
+                data-backdrop="static"
+                data-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5
+                                class="modal-title font-weight-bold"
+                                id="staticBackdropLabel"
+                            >
+                                Hapus Data Transaksi
+                            </h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            Anda akan menghapus data transaksi ini. Yakin?
+                        </div>
+
+                        <div class="modal-footer">
+                            <a
+                                href="http://localhost/iuran_lingkungan/adminVerifikasi"
+                            >
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary pt-1 pd-1 text-small"
+                                    data-dismiss="modal"
+                                >
+                                    Batal
+                                </button>
+                            </a>
+                            <a
+                                href="http://localhost/iuran_lingkungan/adminVerifikasi/hapus/59"
+                            >
+                                <button
+                                    type="button"
+                                    class="btn btn-danger pt-1 pd-1 text-small"
+                                >
+                                    Hapus
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+/* Judul Konten ----------------------------------------------------------------------------*/
+.halaman .konten {
+    width: 85%;
+    padding: 0 28px;
+}
+
+.halaman .konten .judul-konten {
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    cursor: pointer;
+}
+
+.halaman .konten .judul-konten h5 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+/* Isi Konten ------------------------------------------------------------------------------*/
+.halaman .konten .isi-konten {
+    display: inline-block;
+    width: 100%;
+}
+
+.halaman .konten .isi-konten .kolom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+
+.halaman .konten .isi-konten .kolom .kartu {
+    width: 350px;
+    height: 200px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.halaman .konten .isi-konten .kolom .kartu a {
+    width: 100%;
+    height: 100%;
+    padding: 16px 0px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #454545;
+}
+
+.halaman .konten .isi-konten .kolom .kartu:hover {
+    border: 3px solid #7f00ff;
+    box-sizing: inherit;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.halaman .konten .isi-konten .kolom .kartu:hover h4,
+.halaman .konten .isi-konten .kolom .kartu:hover h1,
+.halaman .konten .isi-konten .kolom .kartu:hover h5 {
+    color: white;
+}
+
+.halaman .konten .isi-konten .kolom .kartu h4 {
+    font-size: 16px;
+}
+
+.halaman .konten .isi-konten .kolom .kartu h1 {
+    font-size: 72px;
+    font-weight: 700;
+    color: #e100ff;
+}
+
+.halaman .konten .isi-konten .kolom .kartu h5 {
+    font-size: 14px;
+}
+
+/**? SMARTPHONE **/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    /* Judul Konten ----------------------------------------------------------------------------*/
+    .halaman .konten .judul-konten h5 {
+        font-size: 16px;
+    }
+
+    /* Isi Konten ------------------------------------------------------------------------------*/
+    .halaman .konten .isi-konten .kolom {
+        padding: 30px 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .halaman .konten .isi-konten .kolom .kartu {
+        width: 250px;
+        height: 150px;
+        margin-bottom: 16px;
+    }
+
+    .halaman .konten .isi-konten .kolom .kartu h4 {
+        font-size: 14px;
+    }
+
+    .halaman .konten .isi-konten .kolom .kartu h1 {
+        font-size: 48px;
+    }
+
+    .halaman .konten .isi-konten .kolom .kartu h5 {
+        font-size: 12px;
+    }
+}
+
+/**? TABLET - portrait **/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Judul Konten ----------------------------------------------------------------------------*/
+    .halaman .konten .judul-konten h5 {
+        font-size: 16px;
+    }
+
+    /* Isi Konten ------------------------------------------------------------------------------*/
+    .halaman .konten .isi-konten .kolom {
+        padding: 30px 0px;
+    }
+
+    .halaman .konten .isi-konten .kolom .kartu {
+        width: 200px;
+    }
+}
+
+/**? TABLET - landscape **/
+@media only screen and (min-width: 1024px) and (max-width: 1290px) {
+    /* Judul Konten ----------------------------------------------------------------------------*/
+    .halaman .konten .judul-konten h5 {
+        font-size: 16px;
+    }
+
+    /* Isi Konten ------------------------------------------------------------------------------*/
+    .halaman .konten .isi-konten .kolom {
+        padding: 30px 0px;
+    }
+
+    .halaman .konten .isi-konten .kolom .kartu {
+        width: 300px;
+    }
+}

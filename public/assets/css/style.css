@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "heebo", sans-serif;
+}
+
+/* color {
+    purple: #e100ff;
+    blue: #7f00ff;
+} */
+
+body {
+    min-height: 100vh;
+}
+
+.halaman {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+/* Menu Sidebar ----------------------------------------------------------------------------*/
+.halaman .menu {
+    width: 15%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Logo ------------------------------------------------------------------------------------*/
+.halaman .menu .logo {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.halaman .menu .logo h1 {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 28px;
+    background-image: linear-gradient(
+        to right,
+        #7f00ff,
+        #e100ff
+    ); /* Warna gradient */
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+
+/* Menu ------------------------------------------------------------------------------------*/
+.halaman .menu ul {
+    padding: 0 16px;
+}
+
+.halaman .menu ul li {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.halaman .menu ul li a {
+    padding: 8px 16px;
+    border-radius: 30px;
+    display: block;
+    text-decoration: none;
+    color: #454545;
+}
+
+.halaman .menu ul li a:hover {
+    color: #fff;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.halaman .menu ul li a span {
+    margin-left: 8px;
+}
+
+/* Menu Keluar -----------------------------------------------------------------------------*/
+.halaman .menu .logout {
+    margin-top: auto;
+    margin-bottom: 48px;
+}
+
+.halaman .menu .logout li a {
+    color: red;
+}
+
+/**? SMARTPHONE **/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    /* Menu Sidebar ----------------------------------------------------------------------------*/
+    .halaman .menu {
+        width: 16vw;
+    }
+
+    /* Logo ------------------------------------------------------------------------------------*/
+    .halaman .menu .logo h1 {
+        display: none;
+    }
+
+    /* Menu ------------------------------------------------------------------------------------*/
+    .halaman .menu ul li {
+        margin-top: 16px;
+    }
+
+    .halaman .menu ul li i {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .halaman .menu ul li span {
+        display: none;
+    }
+}
+
+/**? TABLET - portrait **/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .halaman .menu {
+        width: 12vw;
+    }
+
+    /* Logo ------------------------------------------------------------------------------------*/
+    .halaman .menu .logo h1 {
+        display: none;
+    }
+
+    /* Menu ------------------------------------------------------------------------------------*/
+    .halaman .menu ul li {
+        margin-top: 24px;
+    }
+
+    .halaman .menu ul li i {
+        display: flex;
+        justify-content: center;
+        font-size: 28px;
+    }
+
+    .halaman .menu ul li span {
+        display: none;
+    }
+}
+
+/**? TABLET - landscape **/
+@media only screen and (min-width: 1024px) and (max-width: 1290px) {
+}

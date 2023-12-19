@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "heebo", sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.halaman {
+    height: 100vh;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.halaman .konten {
+    width: 400px;
+    height: 410px;
+    padding: 32px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.halaman .konten .judul-konten {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.halaman .konten .judul-konten h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.halaman .konten .isi-konten .nama-kategori {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.halaman .konten .isi-konten .nama-kategori label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.halaman .konten .isi-konten .nama-kategori input {
+    height: 36px;
+    padding: 0 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+}
+
+.halaman .konten .isi-konten .nama-kategori input:focus {
+    border: 3px solid #e100ff;
+}
+
+.halaman .konten .isi-konten .deskripsi {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.halaman .konten .isi-konten .deskripsi label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.halaman .konten .isi-konten .deskripsi textarea {
+    height: 150px;
+    padding: 8px;
+    border: 3px solid #7f00ff;
+    border-radius: 15px;
+    resize: none;
+}
+
+.halaman .konten .isi-konten .deskripsi textarea:focus {
+    border: 3px solid #e100ff;
+}
+
+.halaman .konten .isi-konten .submit {
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e100ff;
+}
+
+.halaman .konten .isi-konten .submit:hover {
+    background-color: #7f00ff;
+}

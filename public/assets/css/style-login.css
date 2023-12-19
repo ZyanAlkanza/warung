@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "heebo", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.halaman {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.halaman .konten {
+    width: 350px;
+    height: 400px;
+    padding: 32px;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.halaman .konten .judul-konten {
+    margin-bottom: 16px;
+}
+
+.halaman .konten .judul-konten h1 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.halaman .konten .isi-konten form {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.halaman .konten .isi-konten .email {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.halaman .konten .isi-konten .email input {
+    padding: 4px 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+}
+
+.halaman .konten .isi-konten .email input:focus {
+    border: 3px solid #e100ff;
+}
+
+.halaman .konten .isi-konten .password {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.halaman .konten .isi-konten .password input {
+    padding: 4px 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+}
+
+.halaman .konten .isi-konten .password input:focus {
+    border: 3px solid #e100ff;
+}
+
+.halaman .konten .isi-konten .rememberMe {
+    margin-bottom: 16px;
+}
+
+.halaman .konten .isi-konten button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #7f00ff;
+}
+
+.halaman .konten .isi-konten button:hover {
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.halaman .konten .isi-konten a {
+    margin-top: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: #e100ff;
+}

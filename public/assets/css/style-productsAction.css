@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "heebo", sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.halaman {
+    height: 100vh;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.halaman .konten {
+    width: 400px;
+    height: 650px;
+    padding: 32px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.halaman .konten .judul-konten {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.halaman .konten .judul-konten h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.halaman .konten .gambar-konten {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.halaman .konten .gambar-konten img {
+    max-width: 100%;
+    height: auto;
+}
+
+.halaman .konten .isi-konten .nama-produk,
+.halaman .konten .isi-konten .nama-kategori,
+.halaman .konten .isi-konten .gambar {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.halaman .konten .isi-konten .nama-produk label,
+.halaman .konten .isi-konten .nama-kategori label,
+.halaman .konten .isi-konten .gambar label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.halaman .konten .isi-konten .nama-produk input {
+    height: 36px;
+    padding: 8px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+}
+
+.halaman .konten .isi-konten .nama-produk input:focus,
+.halaman .konten .isi-konten .stokDanHarga input:focus {
+    border: 3px solid #e100ff;
+}
+
+.halaman .konten .isi-konten .stokDanHarga {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.halaman .konten .isi-konten .stokDanHarga .harga,
+.halaman .konten .isi-konten .stokDanHarga .stok {
+    display: flex;
+    flex-direction: column;
+}
+
+.halaman .konten .isi-konten .stokDanHarga .harga label,
+.halaman .konten .isi-konten .stokDanHarga .stok label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.halaman .konten .isi-konten .stokDanHarga input {
+    height: 36px;
+    padding: 8px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+}
+
+.halaman .konten .isi-konten .stokDanHarga .harga input {
+    width: 230px;
+}
+
+.halaman .konten .isi-konten .stokDanHarga .stok input {
+    width: 80px;
+}
+
+.halaman .konten .isi-konten .gambar input[type="file"]::file-selector-button {
+    height: 36px;
+    padding: 0 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+}
+
+.halaman
+    .konten
+    .isi-konten
+    .gambar
+    input[type="file"]::file-selector-button:hover {
+    color: white;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.halaman .konten .isi-konten .nama-kategori select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+}
+
+.halaman .konten .isi-konten .deskripsi {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.halaman .konten .isi-konten .deskripsi label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.halaman .konten .isi-konten .deskripsi textarea {
+    height: 150px;
+    padding: 8px;
+    border: 3px solid #7f00ff;
+    border-radius: 15px;
+    resize: none;
+}
+
+.halaman .konten .isi-konten .deskripsi textarea:focus {
+    border: 3px solid #e100ff;
+}
+
+.halaman .konten .isi-konten .submit {
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e100ff;
+}
+
+.halaman .konten .isi-konten .submit:hover {
+    background-color: #7f00ff;
+}
+
+.halaman .konten .isi-konten-detail h1 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.halaman .konten .isi-konten-detail h5 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.halaman .konten .isi-konten-detail span {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.halaman .konten .isi-konten-detail h2 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.halaman .konten .isi-konten-detail p {
+    height: 130px;
+    font-size: 14px;
+}
+
+.halaman .konten .isi-konten-detail a {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e100ff;
+}
+
+.halaman .konten .isi-konten-detail a:hover {
+    background-color: #7f00ff;
+}

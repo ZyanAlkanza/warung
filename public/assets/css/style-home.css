@@ -1,0 +1,411 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "heebo", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigasi --------------------------------------------------------------------------------*/
+.halaman nav {
+    width: 100%;
+    height: 52px;
+    padding: 0 100px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.halaman nav .judul h1 a {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+}
+
+.halaman nav input {
+    height: 36px;
+    margin: auto 0;
+    padding: 0 16px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+/* Konten ----------------------------------------------------------------------------------*/
+.halaman .konten {
+    padding: 80px 100px 50px 100px;
+}
+
+.halaman .konten .row {
+    row-gap: 24px;
+}
+
+/* Kartu -----------------------------------------------------------------------------------*/
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.row .kartu {
+    padding: 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 16px;
+}
+
+.row .kartu .gambar {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row .kartu .gambar img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.row .kartu .teks .nama-produk {
+    height: 40px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.row .kartu .teks .kategori {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #454545;
+}
+
+.row .kartu .teks span {
+    margin-bottom: 24px;
+    font-size: 10px;
+}
+
+.row .kartu .teks .harga {
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.row .kartu a {
+    width: 100%;
+    padding: 8px 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+    font-size: 0.875rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #7f00ff;
+}
+
+.row .kartu a:hover {
+    color: white;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+/* Produk Tidak Ditemukan ------------------------------------------------------------------*/
+.row .kosong {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+
+.row .kosong img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.row .kosong h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Halaman Tidak Ditemukan -----------------------------------------------------------------*/
+.tidakDitemukan {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tidakDitemukan img {
+    height: 200px;
+    margin-bottom: 24px;
+}
+
+.tidakDitemukan h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* .halaman .konten .kartu {
+    padding: 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 16px;
+}
+
+.halaman .konten .kartu .gambar-produk {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.halaman .konten .kartu .gambar-produk img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.halaman .konten .kartu .nama-produk {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.halaman .konten .kartu .kategori {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #454545;
+}
+
+.halaman .konten .kartu span {
+    margin-bottom: 24px;
+    font-size: 10px;
+}
+
+.halaman .konten .kartu .harga {
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.halaman .konten .kartu a {
+    width: 100%;
+    padding: 8px 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+    font-size: 0.875rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #7f00ff;
+}
+
+.halaman .konten .kartu a:hover {
+    color: white;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+} */
+
+/**? SMARTPHONE **/
+@media only screen and (max-width: 767px) {
+    /* Navigasi ----------------------------------------------------------------------------*/
+    .halaman nav {
+        padding: 0 30px;
+    }
+
+    .halaman nav .judul h1 a {
+        font-size: 20px;
+    }
+
+    .halaman nav input {
+        width: 200px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    /* Konten ------------------------------------------------------------------------------*/
+    .halaman .konten {
+        padding: 80px 30px 50px 30px;
+    }
+
+    /* Kartu -------------------------------------------------------------------------------*/
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .row .kartu {
+        padding: 10px;
+    }
+
+    .row .kartu .gambar {
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .row .kartu .gambar img {
+        width: 90%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .row .kartu .teks .nama-produk {
+        height: 36px;
+        font-size: 14px;
+        overflow: hidden;
+    }
+
+    .row .kartu .teks .kategori {
+        font-size: 10px;
+    }
+
+    .row .kartu .teks span {
+        margin-bottom: 16px;
+    }
+
+    .row .kartu .teks .harga {
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+
+    /* Produk Tidak Ditemukan --------------------------------------------------------------*/
+    .row .kosong {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: 25%;
+        left: 18%;
+    }
+
+    .row .kosong img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .row .kosong h3 {
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    /* Halaman Tidak Ditemukan -------------------------------------------------------------*/
+    .tidakDitemukan {
+        height: 80vh;
+    }
+
+    .tidakDitemukan img {
+        height: 150px;
+        margin-bottom: 24px;
+    }
+}
+
+/**? TABLET - portrait**/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Navigasi ----------------------------------------------------------------------------*/
+    .halaman nav {
+        padding: 0 30px;
+    }
+
+    .halaman nav .judul h1 a {
+        font-size: 20px;
+    }
+
+    .halaman nav input {
+        width: 200px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    /* Konten ------------------------------------------------------------------------------*/
+    .halaman .konten {
+        padding: 80px 30px 50px 30px;
+    }
+
+    /* Kartu -------------------------------------------------------------------------------*/
+    .row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .row .kartu {
+        padding: 10px;
+    }
+
+    .row .kartu .gambar {
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .row .kartu .gambar img {
+        width: 90%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .row .kartu .teks .nama-produk {
+        height: 36px;
+        font-size: 14px;
+        overflow: hidden;
+    }
+
+    .row .kartu .teks .kategori {
+        font-size: 10px;
+    }
+
+    .row .kartu .teks span {
+        margin-bottom: 16px;
+    }
+
+    .row .kartu .teks .harga {
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+
+    /* Produk Tidak Ditemukan --------------------------------------------------------------*/
+    .row .kosong {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: 25%;
+        left: 35%;
+    }
+
+    .row .kosong img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .row .kosong h3 {
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    /* Halaman Tidak Ditemukan -------------------------------------------------------------*/
+    .tidakDitemukan {
+        height: 80vh;
+    }
+
+    .tidakDitemukan img {
+        height: 150px;
+        margin-bottom: 24px;
+    }
+}
+
+/**? TABLET - landscape **/
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    /* Kartu -------------------------------------------------------------------------------*/
+    .row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

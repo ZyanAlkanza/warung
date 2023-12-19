@@ -1,0 +1,171 @@
+/* Judul Konten ----------------------------------------------------------------------------*/
+.halaman .konten {
+    width: 85%;
+    padding: 0 28px;
+}
+
+.halaman .konten .judul-konten {
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    cursor: pointer;
+}
+.halaman .konten .judul-konten h5 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+/* Menu Aksesibilitas ----------------------------------------------------------------------*/
+.halaman .konten .aksesibilitas {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.halaman .konten .aksesibilitas input {
+    height: 36px;
+    margin: auto 0;
+    padding: 0 16px;
+    border: 3px solid #7f00ff;
+    border-radius: 30px;
+}
+
+.halaman .konten .aksesibilitas input:focus {
+    border: 3px solid #e100ff;
+}
+
+.halaman .konten .aksesibilitas .alert {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+.halaman .konten .aksesibilitas a {
+    padding: 8px 16px;
+    border: 3px solid #e100ff;
+    border-radius: 30px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e100ff;
+}
+
+.halaman .konten .aksesibilitas a:hover {
+    border: 3px solid #7f00ff;
+    background-color: #7f00ff;
+}
+
+.halaman .konten .aksesibilitas a:last-child {
+    margin-left: 8px;
+    border: 3px solid #e100ff;
+    color: #e100ff;
+    background-color: #fff;
+}
+
+.halaman .konten .aksesibilitas a:last-child:hover {
+    border: 3px solid #7f00ff;
+    color: #fff;
+    background-color: #7f00ff;
+}
+
+/* Isi Konten ------------------------------------------------------------------------------*/
+.halaman .konten .isi-konten {
+    display: inline-block;
+    width: 100%;
+}
+
+.halaman .konten .isi-konten th {
+    padding: 16px;
+    font-size: 14px;
+}
+
+.halaman .konten .isi-konten .nomor {
+    width: 50px;
+    text-align: center;
+}
+
+.halaman .konten .isi-konten .kategori {
+    width: 300px;
+}
+
+.halaman .konten .isi-konten .deskripsi {
+    width: 600px;
+}
+
+.halaman .konten .isi-konten .aksi {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    column-gap: 8px;
+}
+
+.halaman .konten .isi-konten td {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.halaman .konten .isi-konten .ubah {
+    border: 3px solid #7f00ff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #454545;
+    text-decoration: none;
+}
+
+.halaman .konten .isi-konten .aksi .hapus {
+    border: 3px solid #7f00ff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #454545;
+    text-decoration: none;
+}
+
+.halaman .konten .isi-konten .ubah:hover,
+.halaman .konten .isi-konten .hapus:hover {
+    border: 3px solid white;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    color: #fff;
+}
+
+/* Konten Tidak Ditemukan ------------------------------------------------------------------*/
+.halaman .konten .isi-konten .gambar-konten-kosong {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.halaman .konten .isi-konten .gambar-konten-kosong img {
+    width: 200px;
+}
+
+.halaman .konten .isi-konten .konten-kosong {
+    padding: 8px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Pagination ------------------------------------------------------------------------------*/
+.halaman .konten .isi-konten .pagination {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80px;
+    padding-top: 25px;
+}
+
+.halaman .konten .isi-konten .pagination a {
+    border-radius: 30px;
+    text-decoration: none;
+    color: #7f00ff;
+}
+
+.halaman .konten .isi-konten .pagination span {
+    border-radius: 30px;
+}
