@@ -11,10 +11,10 @@ class CategoriesController extends Controller
     public function data(Request $request){
 
         if($request->has('search')){
-            $categories = Categories::where('name', 'LIKE', '%'.$request->search.'%')->simplePaginate(8);
+            $categories = Categories::where('name', 'LIKE', '%'.$request->search.'%')->simplePaginate(5);
         }else{
             // $categories = DB::table('categories')->simplePaginate(8);
-            $categories = Categories::simplePaginate(8);
+            $categories = Categories::simplePaginate(5);
         }
 
         //* CARA 1 KIRIM DATA
@@ -71,7 +71,7 @@ class CategoriesController extends Controller
     }
 
     public function restore(){
-        $categories = Categories::onlyTrashed()->simplePaginate(8);
+        $categories = Categories::onlyTrashed()->simplePaginate(5);
 
         return view('dashboard.categories-restore', compact('categories'));
     }

@@ -49,56 +49,58 @@
 
         <!-- Isi Konten -->
         <div class="isi-konten">
-            <table>
-                <thead>
-                    <th class="nomor">No</th>
-                    <th class="nama-produk">Product</th>
-                    <th class="kategori">Category</th>
-                    <th class="stok">Stock</th>
-                    <th class="harga">Price</th>
-                    <th class="aksi">Action</th>
-                </thead>
-    
-                <tbody>
+            <div class="tabel">
+                <table>
+                    <thead>
+                        <th class="nomor">No</th>
+                        <th class="nama-produk">Product</th>
+                        <th class="kategori">Category</th>
+                        <th class="stok">Stock</th>
+                        <th class="harga">Price</th>
+                        <th class="aksi">Action</th>
+                    </thead>
+        
+                    <tbody>
 
-                    @forelse ($products as $prod)
-                    <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $prod->product_name }}</td>
-                        <td>{{ $prod->categories->name }}</td>
-                        <td>
-                    
-                            @if ($prod->stock > 10)
-                                <span class="badge rounded-pill bg-primary">Stock : {{ $prod->stock }} Pcs</span>
-                            @elseif($prod->stock > 5 )
-                                <span class="badge rounded-pill bg-success">Stock : {{ $prod->stock }} Pcs</span>
-                            @elseif($prod->stock > 0 )
-                                <span class="badge rounded-pill bg-warning">Stock : {{ $prod->stock }} Pcs</span>
-                            @else
-                                <span class="badge rounded-pill bg-danger">Out of Stock</span>
-                            @endif
+                        @forelse ($products as $prod)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $prod->product_name }}</td>
+                            <td>{{ $prod->categories->name }}</td>
+                            <td>
+                        
+                                @if ($prod->stock > 10)
+                                    <span class="badge rounded-pill bg-primary">Stock : {{ $prod->stock }} Pcs</span>
+                                @elseif($prod->stock > 5 )
+                                    <span class="badge rounded-pill bg-success">Stock : {{ $prod->stock }} Pcs</span>
+                                @elseif($prod->stock > 0 )
+                                    <span class="badge rounded-pill bg-warning">Stock : {{ $prod->stock }} Pcs</span>
+                                @else
+                                    <span class="badge rounded-pill bg-danger">Out of Stock</span>
+                                @endif
 
-                        </td>
-                        <td>Rp. {{ number_format( $prod->price, 0) }}</td>
-                        <td class="aksi">
-                            <a href="{{ url('products/recycle/'.$prod->id) }}" class="ubah">Restore</a>
-                            <a href="{{ url('products/deletePermanent/'.$prod->id) }}" class="hapus">Delete</a>
-                        </td>
-                    </tr>
-                    @empty
-                    <tr>
-                        <td colspan="6" class="gambar-konten-kosong">
-                            <img src="{{ url('assets/img/empty.svg') }}" alt="">
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td colspan="6" class="konten-kosong">Product Not Found</td>
-                    </tr>
-                    @endforelse
+                            </td>
+                            <td>Rp. {{ number_format( $prod->price, 0) }}</td>
+                            <td class="aksi">
+                                <a href="{{ url('products/recycle/'.$prod->id) }}" class="ubah">Restore</a>
+                                <a href="{{ url('products/deletePermanent/'.$prod->id) }}" class="hapus">Delete</a>
+                            </td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="6" class="gambar-konten-kosong">
+                                <img src="{{ url('assets/img/empty.svg') }}" alt="">
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td colspan="6" class="konten-kosong">Product Not Found</td>
+                        </tr>
+                        @endforelse
 
-                </tbody>
+                    </tbody>
 
-            </table>
+                </table>
+            </div>
 
             <!-- Pagination -->
             <div class="pagination">

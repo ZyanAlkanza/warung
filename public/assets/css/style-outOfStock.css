@@ -54,18 +54,22 @@
 }
 
 .halaman .konten .isi-konten .nama-produk {
+    min-width: 250px;
     width: 300px;
 }
 
 .halaman .konten .isi-konten .kategori {
-    width: 300px;
+    min-width: 100px;
+    width: 200px;
 }
 
 .halaman .konten .isi-konten .stok {
-    width: 100px;
+    min-width: 100px;
+    width: 150px;
 }
 
 .halaman .konten .isi-konten .harga {
+    min-height: 100px;
     width: 200px;
 }
 
@@ -149,4 +153,27 @@
 
 .halaman .konten .isi-konten .pagination span {
     border-radius: 30px;
+}
+
+/**? SMARTPHONE **/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .halaman .konten {
+        padding: 0 16px;
+        overflow-x: hidden;
+    }
+
+    /* Isi Konten ------------------------------------------------------------------------------*/
+    .halaman .konten .isi-konten .tabel {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    /* Konten Tidak Ditemukan ------------------------------------------------------------------*/
+    .halaman .konten .isi-konten .gambar-konten-kosong {
+        text-align: center;
+    }
+
+    .halaman .konten .isi-konten .konten-kosong {
+        text-align: center;
+    }
 }

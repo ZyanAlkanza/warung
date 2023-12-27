@@ -49,40 +49,42 @@
 
         <!-- Isi Konten -->
         <div class="isi-konten">
-            <table>
-                <thead>
-                    <th class="nomor">No</th>
-                    <th class="kategori">Category</th>
-                    <th class="deskripsi">Descriptions</th>
-                    <th class="aksi">Action</th>
-                </thead>
-    
-                <tbody>
+            <div class="tabel">
+                <table>
+                    <thead>
+                        <th class="nomor">No</th>
+                        <th class="kategori">Category</th>
+                        <th class="deskripsi">Descriptions</th>
+                        <th class="aksi">Action</th>
+                    </thead>
+        
+                    <tbody>
 
-                    @forelse ($categories as $cat)
-                    <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $cat->name }}</td>
-                        <td>{{ $cat->desc }}</td>
-                        <td class="aksi">
-                            <a href="{{ url('categories/recycle/'.$cat->id) }}" class="ubah">Restore</a>
-                            <a href="{{ url('categories/deletePermanent/'.$cat->id) }}" class="hapus">Delete</a>
-                        </td>
-                    </tr>
-                    @empty
-                    <tr>
-                        <td colspan="6" class="gambar-konten-kosong">
-                            <img src="{{ url('assets/img/empty.svg') }}" alt="">
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td colspan="6" class="konten-kosong">Categories Not Found</td>
-                    </tr>
-                    @endforelse
+                        @forelse ($categories as $cat)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $cat->name }}</td>
+                            <td>{{ $cat->desc }}</td>
+                            <td class="aksi">
+                                <a href="{{ url('categories/recycle/'.$cat->id) }}" class="ubah">Restore</a>
+                                <a href="{{ url('categories/deletePermanent/'.$cat->id) }}" class="hapus">Delete</a>
+                            </td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="6" class="gambar-konten-kosong">
+                                <img src="{{ url('assets/img/empty.svg') }}" alt="">
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td colspan="6" class="konten-kosong">Categories Not Found</td>
+                        </tr>
+                        @endforelse
 
-                </tbody>
+                    </tbody>
 
-            </table>
+                </table>
+            </div>
 
              <!-- Pagination -->
              <div class="pagination">

@@ -43,44 +43,46 @@
 
         <!-- Isi Konten -->
         <div class="isi-konten">
-            <table>
-                <thead>
-                    <th class="nomor">No</th>
-                    <th class="kategori">Category</th>
-                    <th class="deskripsi">Descriptions</th>
-                    <th class="aksi">Action</th>
-                </thead>
-    
-                <tbody>
+            <div class="tabel">
+                <table>
+                    <thead>
+                        <th class="nomor">No</th>
+                        <th class="kategori">Category</th>
+                        <th class="deskripsi">Descriptions</th>
+                        <th class="aksi">Action</th>
+                    </thead>
+        
+                    <tbody>
 
-                    @forelse ($categories as $cat)
-                    <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $cat->name }}</td>
-                        <td>{{ $cat->desc }}</td>
-                        <td class="aksi">
-                            <a href="{{ url('categories/edit/'.$cat->id) }}" class="ubah">Edit</a>
-                            <form action="{{ url('categories/'.$cat->id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this data?')">
-                                @method('delete')
-                                @csrf
-                                <button type="submit" class="hapus">Delete</button>
-                            </form>
-                        </td>
-                    </tr>
-                    @empty
-                        <!-- Konten Tidak Ditemukan-->
+                        @forelse ($categories as $cat)
                         <tr>
-                            <td colspan="6" class="gambar-konten-kosong">
-                                <img src="{{ url('assets/img/empty.svg') }}" alt="">
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $cat->name }}</td>
+                            <td>{{ $cat->desc }}</td>
+                            <td class="aksi">
+                                <a href="{{ url('categories/edit/'.$cat->id) }}" class="ubah">Edit</a>
+                                <form action="{{ url('categories/'.$cat->id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this data?')">
+                                    @method('delete')
+                                    @csrf
+                                    <button type="submit" class="hapus">Delete</button>
+                                </form>
                             </td>
-                        </tr>  
-                        <tr>
-                            <td colspan="6" class="konten-kosong">Categories Not Found</td>
                         </tr>
-                    @endforelse
-                </tbody>
+                        @empty
+                            <!-- Konten Tidak Ditemukan-->
+                            <tr>
+                                <td colspan="6" class="gambar-konten-kosong">
+                                    <img src="{{ url('assets/img/empty.svg') }}" alt="">
+                                </td>
+                            </tr>  
+                            <tr>
+                                <td colspan="6" class="konten-kosong">Categories Not Found</td>
+                            </tr>
+                        @endforelse
+                    </tbody>
 
-            </table>
+                </table>
+            </div>
 
             <!-- Pagination -->
             <div class="pagination">

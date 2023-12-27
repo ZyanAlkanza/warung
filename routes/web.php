@@ -40,7 +40,7 @@ Route::get('register', [RegisterController::class, 'index']);
 Route::post('register', [RegisterController::class, 'store']);
 
 Route::get('outofstocks', function () {
-    $outOfStock = Products::where('stock', '=', 0)->simplePaginate(8);
+    $outOfStock = Products::where('stock', '=', 0)->simplePaginate(5);
     
     return view('dashboard.outofstocks', compact('outOfStock'));
 })->middleware('auth');

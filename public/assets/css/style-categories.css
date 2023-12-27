@@ -90,11 +90,12 @@
 }
 
 .halaman .konten .isi-konten .kategori {
+    min-width: 200px;
     width: 300px;
 }
 
 .halaman .konten .isi-konten .deskripsi {
-    width: 600px;
+    min-width: 300px;
 }
 
 .halaman .konten .isi-konten .aksi {
@@ -168,4 +169,34 @@
 
 .halaman .konten .isi-konten .pagination span {
     border-radius: 30px;
+}
+
+/**? SMARTPHONE **/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    /* Judul Konten ----------------------------------------------------------------------------*/
+    .halaman .konten {
+        padding: 0 16px;
+        overflow-x: hidden;
+    }
+
+    /* Menu Aksesibilitas ----------------------------------------------------------------------*/
+    .halaman .konten .aksesibilitas {
+        margin: 16px 0;
+        flex-direction: column;
+    }
+
+    /* Isi Konten ------------------------------------------------------------------------------*/
+    .halaman .konten .isi-konten .tabel {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    /* Konten Tidak Ditemukan ------------------------------------------------------------------*/
+    .halaman .konten .isi-konten .gambar-konten-kosong {
+        text-align: center;
+    }
+
+    .halaman .konten .isi-konten .konten-kosong {
+        text-align: center;
+    }
 }

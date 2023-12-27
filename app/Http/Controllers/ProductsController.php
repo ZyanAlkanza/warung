@@ -19,13 +19,13 @@ class ProductsController extends Controller
 
         //* CARA SEARCH DATA
         if($request->has('search')){
-            $products = Products::where('product_name', 'LIKE', '%'.$request->search.'%')->with('Categories')->simplePaginate(8);
+            $products = Products::where('product_name', 'LIKE', '%'.$request->search.'%')->with('Categories')->simplePaginate(5);
         }else{
             //* CARA 1 AMBIL DATA
             // $products = Products::all();
 
             //* CARA 2 AMBIL DATA
-            $products = Products::with('Categories')->simplePaginate(8);
+            $products = Products::with('Categories')->simplePaginate(5);
         }
         
         return view('dashboard.products', compact('products'));
@@ -194,7 +194,7 @@ class ProductsController extends Controller
 
     public function restore(){
         //* MENAMPILKAN DATA YANG DI SOFT DELETE
-        $products = Products::onlyTrashed()->simplePaginate(8);
+        $products = Products::onlyTrashed()->simplePaginate(5);
 
         return view('dashboard.products-restore', compact('products'));
     }
