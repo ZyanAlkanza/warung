@@ -30,8 +30,8 @@
                     <input type="password" name="password">
                 </div>
                 <div class="rememberMe">
-                    <input type="checkbox">
-                    <label for="">Remember Me</label>
+                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                    <label for="remember">Remember Me</label>
                 </div>
                 <button type="submit">Login</button>
                 <a href="/register">Register</a>
